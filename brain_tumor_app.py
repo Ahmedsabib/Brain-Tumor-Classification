@@ -6,7 +6,7 @@ from PIL import Image
 # ================================
 # Load trained model
 # ================================
-MODEL_PATH = "C:/Users/USER/Desktop/Study/Brain Tumor Classification/Brain_CNN2.h5"  # update if needed
+MODEL_PATH = "Brain_CNN2.h5"  # update if needed
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # Define parameters
@@ -110,4 +110,5 @@ if uploaded_file is not None:
         st.markdown(f"""<div style='background-color:rgba(39, 174, 96, 0.8); padding:15px; border-radius:10px;'>
                         <h3 style='color:#D5F5E3;'>✅ No Tumor Detected</h3>
                         <p><b>Confidence:</b> {confidence*100:.2f}%</p>
+
                         </div>""", unsafe_allow_html=True)
